@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>All</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Arts &amp; Theatre</item>
+        <item>Film</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+    <string-array name="categories_values">
+        <item>all</item>
+        <item>music</item>
+        <item>sports</item>
+        <item>arts &amp; theatre</item>
+        <item>film</item>
+        <item>miscellaneous</item>
+    </string-array>
+
+    <string-array name="units">
+        <item>Miles</item>
+        <item>Kilometers</item>
+    </string-array>
+
+    <string-array name="units_values">
+        <item>miles</item>
+        <item>kilometers</item>
+    </string-array>
+
+</resources>

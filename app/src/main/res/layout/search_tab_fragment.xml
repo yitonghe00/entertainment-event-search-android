@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/keywordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Keyword" />
+
+    <TextView
+        android:id="@+id/keywordWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keywordLabel"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Please enter mandatory field"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keywordWarning"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_alignLeft="@+id/keywordLabel"
+        android:ems="10"
+        android:hint="Enter keyword"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keyword"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_alignLeft="@+id/keywordLabel"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:text="Category" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryLabel"
+        android:layout_marginTop="10dp"
+        android:entries="@array/categories" />
+
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/category"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_marginTop="5dp"
+        android:text="DIstance"
+        android:layout_alignLeft="@+id/keywordLabel" />
+
+    <EditText
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distanceLabel"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_alignLeft="@+id/keywordLabel"
+        android:ems="10"
+        android:hint="10"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/units" />
+
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/unit"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:text="From"
+        android:layout_alignLeft="@+id/keywordLabel" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fromLabel"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_alignLeft="@+id/keywordLabel">
+
+        <RadioButton
+            android:id="@+id/current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fromLabel"
+            android:layout_alignStart="@+id/keywordLabel"
+            android:text="Current location"
+            android:layout_alignLeft="@+id/keywordLabel" />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/current"
+            android:layout_alignStart="@+id/keywordLabel"
+            android:text="Other. Specify Location"
+            android:layout_alignLeft="@+id/keywordLabel" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/locationWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogroup"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Please enter mandatory field"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationWarning"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:layout_marginLeft="25dp"
+        android:ems="10"
+        android:hint="Type in the Location"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/keywordLabel" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/location"
+        android:layout_alignStart="@+id/keywordLabel"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/keywordLabel">
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SEARCH" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CLEAR" />
+    </LinearLayout>
+
+
+</RelativeLayout>
