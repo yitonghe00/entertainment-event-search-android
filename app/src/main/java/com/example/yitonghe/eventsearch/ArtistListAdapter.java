@@ -45,8 +45,8 @@ public class ArtistListAdapter extends RecyclerView.Adapter<ArtistListAdapter.Ar
             artistViewHolder.artistTable.setVisibility(View.GONE);
         }
 
-        // ImageListAdapter imageListAdapter = new ImageListAdapter(artists.get(i).images);
-        // artistViewHolder.imageList.setAdapter(imageListAdapter);
+        ImageListAdapter imageListAdapter = new ImageListAdapter(artists.get(i).images);
+        artistViewHolder.imageList.setAdapter(imageListAdapter);
 
     }
 
