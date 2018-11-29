@@ -101,8 +101,7 @@ public class DetailsActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("ERROR", error.toString());
-                // TODO: Error message
+                Toast.makeText(DetailsActivity.this, "Failed to get event info", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -120,8 +119,7 @@ public class DetailsActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("ERROR", error.toString());
-                // TODO: Error message
+                Toast.makeText(DetailsActivity.this, "Failed to get venue info", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -136,7 +134,7 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.i("ERROR", error.toString());
-                // TODO: Error message
+                Toast.makeText(DetailsActivity.this, "Failed to get upcoming events", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -41,7 +41,6 @@ public class ArtistItem {
 
         } catch (Exception e) {
             e.printStackTrace();
-            // TODO: handle error
         }
 
     }
@@ -62,7 +61,6 @@ public class ArtistItem {
 
         } catch (Exception e) {
             e.printStackTrace();
-            // TODO: handle error
         }
     }
 }

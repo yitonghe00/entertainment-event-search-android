@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -102,8 +103,8 @@ public class Tab2Fragment extends Fragment {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Log.i("ERROR", error.toString());
-                            // TODO: Error message
+                            Toast.makeText(getActivity(), "Failed to get artist info", Toast.LENGTH_SHORT).show();
+
                         }
                     });
                 }
@@ -117,8 +118,8 @@ public class Tab2Fragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("ERROR", error.toString());
-                // TODO: Error message
+                Toast.makeText(getActivity(), "Failed to get artist info", Toast.LENGTH_SHORT).show();
+
             }
         });
     }

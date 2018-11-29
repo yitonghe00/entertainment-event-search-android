@@ -219,8 +219,7 @@ public class Tab3Fragment extends Fragment implements OnMapReadyCallback {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
-            // TODO: Error handle
+            Toast.makeText(getActivity(), "Failed to get venue info", Toast.LENGTH_SHORT).show();
         }
 
 

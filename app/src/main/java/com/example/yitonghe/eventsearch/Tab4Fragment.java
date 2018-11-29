@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 
@@ -244,8 +245,8 @@ public class Tab4Fragment extends Fragment {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
-            // TODO: handle error
+            Toast.makeText(getActivity(), "Failed to get upcoming event", Toast.LENGTH_SHORT).show();
+
         }
 
     }

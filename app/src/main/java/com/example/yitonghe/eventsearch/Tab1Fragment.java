@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -264,8 +265,7 @@ public class Tab1Fragment extends Fragment {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
-            // TODO: handle error
+            Toast.makeText(getActivity(), "Failed to get event info", Toast.LENGTH_SHORT).show();
         }
 
     }

@@ -20,7 +20,6 @@ public class UpcomingItem {
             d = simpleDateFormat.parse(date);
         } catch (Exception e) {
             e.printStackTrace();
-            // TODO: Handle parse error
         }
         simpleDateFormat.applyPattern("MMM dd, yyyy");
         printedTime = simpleDateFormat.format(d);

@@ -133,16 +133,14 @@ public class ResultsActivity extends AppCompatActivity {
                     setResultsList();
 
                 } catch (Exception e) {
-                    e.printStackTrace();
-                    // TODO: Error message
+                    Toast.makeText(ResultsActivity.this, "Failed to get search result", Toast.LENGTH_SHORT).show();
                 }
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("ERROR", error.toString());
-                // TODO: Error message
+                Toast.makeText(ResultsActivity.this, "Failed to get search result", Toast.LENGTH_SHORT).show();
             }
         });
     }
