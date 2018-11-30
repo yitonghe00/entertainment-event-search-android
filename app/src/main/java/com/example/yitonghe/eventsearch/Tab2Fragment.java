@@ -59,6 +59,10 @@ public class Tab2Fragment extends Fragment {
 
         this.artists = new ArrayList<>();
         if(artistsData.size() == 0) {
+            done = true;
+            if(created) {
+                display();
+            }
             return;
         }
 
